@@ -4,9 +4,9 @@ import "./index.css";
 import { Container } from "@mui/material";
 
 // Components
-import Duration from "./Components/duration";
+import Duration from "./Components/Duration";
 import Stats from "./Components/Stats";
-import TypingArea from "./Components/typingArea";
+import TypingArea from "./Components/TypingArea";
 
 // React
 import { useState } from "react";
@@ -33,9 +33,7 @@ function App() {
       <TimerContext.Provider value={{ Timer, setTimer }}>
         <WPSContext.Provider value={{ WPS, setWPS }}>
           <ErrorsContext.Provider value={{ ErrorStat, setErrorStat }}>
-            <AccuracyContext.Provider
-              value={{ AccuracyStat, setAccuracyStat }}
-            >
+            <AccuracyContext.Provider value={{ AccuracyStat, setAccuracyStat }}>
               <Duration />
               <Stats />
               <TypingArea />
